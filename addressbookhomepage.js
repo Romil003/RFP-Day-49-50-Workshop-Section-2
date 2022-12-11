@@ -33,3 +33,12 @@ const createInnerHtml = () => {
     }
      document.querySelector('#display').innerHTML = innerHtml;
 }
+
+const remove = (node) => {
+    let contact = contactList.find(cdata=> cdata._id==node._id);
+    if(!contact) return;
+    const index = contactList.map(cdata => cdata._id).indexOf(contact._id);
+    contactList.splice(index,1);
+    localStorage.setItem("ContactList",JSON.stringify(contactList));
+    createInnerHtml();
+}
