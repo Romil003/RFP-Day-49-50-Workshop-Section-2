@@ -1,4 +1,4 @@
 let site_properties = {
     home_page : "addressbookhomepage.js",
-    add_emp_payroll_page: "AddressBookFormPage.html"
+    add_adbk_form_page: "AddressBookFormPage.html"
 }; 
