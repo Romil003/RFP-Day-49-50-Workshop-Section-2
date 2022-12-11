@@ -2,6 +2,7 @@ let contactList;
 window.addEventListener('DOMContentLoaded',(event) => {
     contactList = getContactDataFromStorage();
     createInnerHtml();
+    localStorage.removeItem('editContact');
 });
 
 const getContactDataFromStorage = () => {

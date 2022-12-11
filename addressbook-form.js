@@ -1,3 +1,4 @@
+let isUpdate = false;
 let contact = {};
 window.addEventListener('DOMContentLoaded',(event) => {
     const flname = document.querySelector('#flname');
@@ -47,6 +48,8 @@ window.addEventListener('DOMContentLoaded',(event) => {
             addressError.textContent = e;
         }
     });
+
+    checkForUpdate();
 })
 
 const save = () => {
@@ -121,4 +124,21 @@ function createAndUpdateStorage(personContact) {
 
     alert(contactList.toString());
     localStorage.setItem("ContactList",JSON.stringify(contactList));
+}
+
+const checkForUpdate = () => {
+    const contactJson = localStorage.getItem('editContact');
+    isUpdate = contactJson ? true : false;
+    if(!isUpdate) return;
+    contact = JSON.parse(contactJson);
+    setForm();
+}
+
+const setForm = () => {
+    setValue('#flname',contact._fullName);
+    setValue('#phnumber',contact._phone);
+    setValue('#address',contact._address);
+    setValue('#city',contact._city);
+    setValue('#state',contact._state);
+    setValue('#zipcode',contact._zip);
 }
