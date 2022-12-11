@@ -1,0 +1,43 @@
+html body {
+    margin: 0;
+    height: 100%;
+}
+
+.header {
+    padding: 15px 0;
+    background-color: #ffffff;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid green;
+}
+
+.logo-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 0px solid green;
+    width: 80%;
+}
+
+.logo-content-img {
+    border: solid 0px #42515f;
+}
+
+.adbk-text {
+    font: normal normal bold 20px/25px Monteserrat;
+    font-family: "Monteserrat", sans-serif;
+    letter-spacing: 0px;
+    color: #008CFF;
+    text-transform: capitalize;
+}
+
+.adbk-text-2 {
+    color: #42515F;
+}
+
+* { box-sizing: border-box;}
